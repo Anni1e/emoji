@@ -4,12 +4,11 @@ const input = document.querySelector("input");
 const cards = document.querySelector(".cards");
 
 input.addEventListener("input", (evt) => {
-  
   const text = evt.target.value;
   const search = data.filter(
     (el) =>
-      el.keywords.includes(text.toLowerCase().trim()) ||
-      el.title.includes(text.toLowerCase().trim())
+      el.keywords.toLowerCase().includes(text.toLowerCase().trim()) ||
+      el.title.toLowerCase().includes(text.toLowerCase().trim())
   );
   render(search);
 });
